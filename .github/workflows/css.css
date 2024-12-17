@@ -1,0 +1,322 @@
+/* General Styles */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the content horizontally */
+    background-color: #222; /* Dark background for a sleek look */
+    color: #fff;
+    padding: 20px;
+    position: relative;
+    flex-direction: column; /* Stack items vertically */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the elements within the header-left section */
+    gap: 15px; /* Add spacing between the image and text */
+}
+
+.header-img img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%; /* Circular image */
+    border: 3px solid #8b5e3c; /* Deep brown border */
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    text-align: center; /* Center align the heading text */
+}
+
+/* Decorative bar */
+header::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #8b5e3c, #5a4a3f); /* Brown gradient */
+}
+
+/* Navigation */
+nav {
+    background-color: #5a4a3f; /* Medium brown */
+    padding: 1rem 0;
+}
+
+.nav-content {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-content a {
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #f6ede4; /* Light beige for links */
+}
+
+.nav-content a:hover {
+    color: #8b5e3c; /* Highlight brown */
+}
+
+/* Home Section */
+.home {
+    padding: 4rem 1rem;
+    text-align: center;
+    background-color: #d9b895; /* Soft beige */
+}
+
+.home-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #3c2f2f;
+}
+
+.contBtn .btn {
+    padding: 0.8rem 2rem;
+    font-size: 1.2rem;
+    color: #f6ede4;
+    background-color: #8b5e3c; /* Highlight brown */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contBtn .btn:hover {
+    background-color: #5a4a3f;
+}
+
+/* About Section */
+.about {
+    padding: 4rem 1rem;
+    background: linear-gradient(135deg, #d9b895 30%, #f6ede4 70%); /* Soft gradient for visual interest */
+    position: relative;
+    color: #3c2f2f;
+    overflow: hidden; /* Ensure animations stay within bounds */
+}
+
+/* Add a decorative background with technology-themed design */
+.about::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('tech-pattern.png') no-repeat center center / cover; /* Add tech-style pattern or illustration */
+    opacity: 0.1; /* Subtle visibility for the background */
+    z-index: 1; /* Place it behind the content */
+}
+
+.about .heading {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #8b5e3c; /* Highlight brown for heading */
+    position: relative;
+    z-index: 2; /* Ensure the heading is above the decorative background */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Add slight text shadow for depth */
+}
+
+.aboutCont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+/* Image container with a tech-themed border effect */
+.aboutImg .imgContainer {
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    border: 5px solid #8b5e3c; /* Highlight brown border */
+    background: radial-gradient(circle, #f6ede4, #8b5e3c); /* Gradient to match the theme */
+    position: relative;
+}
+
+.aboutImg .imgContainer::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed #5a4a3f; /* Tech-style dashed border */
+    border-radius: 50%;
+    animation: rotate 6s linear infinite; /* Add rotation for a dynamic look */
+}
+
+/* Rotate animation for the dashed border */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.aboutImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Keep the image circular */
+}
+
+.aboutCont p {
+    max-width: 600px;
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    position: relative;
+    z-index: 2;
+    background: rgba(255, 255, 255, 0.8); /* Slightly transparent background for contrast */
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #3c2f2f;
+}
+
+/* Add subtle animated tech icons to the background */
+.about::after {
+    content: '';
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 300px;
+    height: 300px;
+    background: url('tech-icons.png') no-repeat center center / contain; /* Add tech icons */
+    opacity: 0.2;
+    animation: float 10s ease-in-out infinite; /* Floating effect */
+    z-index: 0;
+}
+
+/* Floating animation for the tech icons */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(20px);
+    }
+}
+
+
+/* Projects Section */
+.projects {
+    padding: 4rem 1rem;
+    background-color: #d9b895; /* Soft beige */
+}
+
+.projects .heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #3c2f2f;
+}
+
+.projects-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.project-item {
+    width: 300px;
+    background-color: #f6ede4; /* Light beige */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    text-align: center;
+    padding: 1rem;
+}
+
+.project-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid #8b5e3c;
+}
+
+.project-item h3 {
+    margin-top: 1rem;
+    color: #3c2f2f;
+}
+
+/* Contact Section */
+.contact {
+    padding: 4rem 1rem;
+    background-color: #f6ede4;
+}
+
+.contact .details {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    color: #3c2f2f;
+}
+
+.contact form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact form label {
+    font-weight: bold;
+    color: #3c2f2f;
+}
+
+.contact form input,
+.contact form textarea,
+.contact form button {
+    padding: 0.8rem;
+    border: 1px solid #8b5e3c;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    border-color: #8b5e3c;
+    outline: none;
+}
+
+.contact form button {
+    background-color: #8b5e3c;
+    color: #f6ede4;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact form button:hover {
+    background-color: #5a4a3f;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1.5rem 0;
+    background-color: #5a4a3f;
+    color: #f6ede4;
+    font-size: 1rem;
+}
